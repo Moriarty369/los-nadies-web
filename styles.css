@@ -1,0 +1,217 @@
+/* Estilos globales */
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Evitar desplazamiento horizontal */
+    overflow-x: hidden;
+}
+
+header {
+    color: #fff;
+    padding: 0px;
+    text-align: center;
+    /* Permite el posicionamiento absoluto en el elemento hijo */
+    position: relative;
+    /* Asegura que el encabezado esté por encima del video */
+    z-index: 1;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    transform-origin: center;
+    transition: transform 0.3s ease;
+    /* Agregamos una transición suave para el zoom */
+}
+
+nav {
+    /* Posicionamiento absoluto en relación al header (elemento padre) */
+    position: absolute;
+    /* Centrar horizontal y verticalmente */
+    top: 50px;
+    left: 30%;
+    right: 30%;
+    justify-content: space-between;
+    z-index: 2;
+    /* Asegura que el menú de navegación esté por encima del video */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.logo-item {
+    display: inline-block;
+}
+
+.donate-button a {
+    padding: 10px 20px;
+    background-color: #ff5722;
+    /* Color de fondo del botón */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.title-container {
+    text-align: center;
+    /* Centra el texto horizontalmente */
+    background-color: #1746A2;
+    /* Cambia el color de fondo a tu preferencia */
+    padding: 20px;
+    /* Añade un espacio alrededor del texto */
+}
+
+h1 {
+    font-family: 'Tu-Fuente-Moderna', sans-serif;
+    background-color: #FF731D;
+    /* Reemplaza 'Tu-Fuente-Moderna' con la fuente que desees */
+    color: #FFF7E9;
+    /* Cambia el color del texto a tu preferencia */
+    font-size: 50px;
+    /* Cambia el tamaño de la fuente a tu preferencia */
+    margin: 0;
+    /* Elimina los márgenes predeterminados del h1 */
+}
+
+/* ----------------------------_YA ESTA CORREGIDO LO DE ARRIBA_----------------------------------- */
+
+
+
+
+.title {
+    display: block;
+    background: #fff;
+    margin-top: -4rem;
+    margin-bottom: -1rem;
+    font-family: khand,sans-serif;
+    color: #000;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 10;
+    padding: .7rem 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+font-weight: 700;
+}
+
+
+::selection {
+background: #b3d4fc;
+text-shadow: none;
+}
+
+
+.container {
+    background-color:#FFF7E9;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    /* Asegura que el contenedor tenga al menos el 100% de la altura de la ventana */
+}
+
+.sections-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+}
+
+/* Estilos para cada sección individual */
+.section1,
+.section2,
+.section3,
+.section4 {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+
+.section1 img,
+.section2 img,
+.section3 img,
+.section4 img {
+    max-width: 200%;
+    /* Restaura el ancho máximo al 100% */
+    height: auto;
+    width: 200%;
+}
+
+/* Estilos para los elementos de texto */
+.section1 h2,
+.section2 h2,
+.section3 h2,
+.section4 h2 {
+    margin: 10px 0;
+    color: black;
+}
+
+.section1 p,
+.section2 p,
+.section3 p,
+.section4 p {
+    margin: 5px 0;
+}
+
+
+
+/* // --------------------------------PRUEBAS-------------------------------------------- */
+
+footer {
+    background-color: #333; /* Color de fondo del footer */
+    color: #fff; /* Color del texto */
+    text-align: center;
+    padding: 20px 0; /* Espaciado interno */
+}
+
+.social-media a {
+    color: #fff; /* Color de los iconos de redes sociales */
+    font-size: 24px;
+    margin: 0 10px; /* Espaciado entre los iconos */
+    text-decoration: none;
+}
+
+.footer-text {
+    margin-top: 10px; /* Espacio superior para el texto del footer */
+    font-size: 14px;
+}
+
