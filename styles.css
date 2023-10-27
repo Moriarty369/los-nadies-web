@@ -2,12 +2,10 @@
 * {
     padding: 0px;
     margin: 0px;
+    font-family: 'Khand', sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
     /* Evitar desplazamiento horizontal */
     overflow-x: hidden;
 }
@@ -41,20 +39,17 @@ video {
 }
 
 nav {
-    /* Posicionamiento absoluto en relación al header (elemento padre) */
     position: absolute;
-    /* Centrar horizontal y verticalmente */
     top: 50px;
-    left: 30%;
-    right: 30%;
-    justify-content: space-between;
+    left: 0;
+    right: 0;
     z-index: 2;
-    /* Asegura que el menú de navegación esté por encima del video */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center;
 }
 
 nav ul li {
@@ -62,14 +57,18 @@ nav ul li {
     margin-right: 20px;
 }
 
+nav ul li:last-child {
+    margin-right: 0; /* Elimina el margen derecho del último elemento */
+}
+
 nav a {
     text-decoration: none;
     color: #fff;
+    font-size: 1.5rem;
 }
 
-
-.logo-item {
-    display: inline-block;
+.logo-item img {
+    width: 80px; /* Ajustar el tamaño del logotipo */
 }
 
 .donate-button a {
@@ -81,18 +80,66 @@ nav a {
     border-radius: 5px;
 }
 
-.title-container {
-    text-align: center;
-    /* Centra el texto horizontalmente */
-    background-color: #1746A2;
-    /* Cambia el color de fondo a tu preferencia */
-    padding: 20px;
-    /* Añade un espacio alrededor del texto */
+.container {
+    background-color: #FFF7E9;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120vh;
+    /* Asegura que el contenedor tenga al menos el 100% de la altura de la ventana */
 }
 
-h1 {
+.title-container {
+    padding-left: 5rem;
+    width: 30%;
+    background: white;
+    margin-left: 8rem;
+    margin-top: -5.5rem;
+    margin-bottom: 0rem;
+    position: relative;
+    z-index: 1;
+    
+}
+
+.title {
+    font-weight: bolder;
+    display: block;
+    font-size: 2.5em;
+    margin-block-start: 0.67em;
+    color: black;
+}
+
+.side-text-container {
+    width: 34.1%;
+    background:white;
+    float:left;
+    margin-left: 8rem;
+    margin-top: 0px;
+    padding-bottom: 2rem;
+    font-size: 1.5rem;
+    text-align: center; /* Centra horizontalmente el contenido */
+}
+
+.side-text-container p {
+    text-align: left; /* Alinea el texto de los elementos <p> a la izquierda */
+}
+
+.involucrate-button {
+    background: linear-gradient(to right,#fe7b01 0,#fd3333 100%);
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .7rem 1rem;
+    display: block; /* Cambia a un bloque para que ocupe toda la anchura */
+    margin: 0 auto; /* Centra horizontalmente el botón dentro del contenedor */
+    width: 50%; /* Puedes ajustar el ancho del botón según tus necesidades */
+    border-radius: 1rem;
+}
+
+.image-title {
     font-family: 'Tu-Fuente-Moderna', sans-serif;
     background-color: #FF731D;
+    padding-left: 1rem;
     /* Reemplaza 'Tu-Fuente-Moderna' con la fuente que desees */
     color: #FFF7E9;
     /* Cambia el color del texto a tu preferencia */
@@ -102,116 +149,66 @@ h1 {
     /* Elimina los márgenes predeterminados del h1 */
 }
 
-/* ----------------------------_YA ESTA CORREGIDO LO DE ARRIBA_----------------------------------- */
-
-
-
-
-.title {
-    display: block;
-    background: #fff;
-    margin-top: -4rem;
-    margin-bottom: -1rem;
-    font-family: khand,sans-serif;
-    color: #000;
-    font-size: 2.5rem;
-    position: relative;
-    z-index: 10;
-    padding: .7rem 2rem;
-}
-
-h1, h2, h3, h4, h5, h6 {
-font-weight: 700;
-}
-
-
-::selection {
-background: #b3d4fc;
-text-shadow: none;
-}
-
-
-.container {
-    background-color:#FFF7E9;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    /* Asegura que el contenedor tenga al menos el 100% de la altura de la ventana */
-}
-
-.sections-container {
+.image-container {
+    float:right;
+    width: 50%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    z-index: 1;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    font-size: 24px;
 }
 
-/* Estilos para cada sección individual */
-.section1,
-.section2,
-.section3,
-.section4 {
-    margin: 20px;
+.image-container img {
+    width: 90%;
+}
+
+.first-img, .second-img, .third-img, .fourth-img {
+    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: 24px;
-    color: black;
 }
 
-.section1 img,
-.section2 img,
-.section3 img,
-.section4 img {
-    max-width: 200%;
-    /* Restaura el ancho máximo al 100% */
+.second-img, .fourth-img {
+    margin-top: 4.5rem;
+}
+
+.first-img img {
+    width: 80%;
     height: auto;
-    width: 200%;
 }
 
-/* Estilos para los elementos de texto */
-.section1 h2,
-.section2 h2,
-.section3 h2,
-.section4 h2 {
-    margin: 10px 0;
-    color: black;
+.second-img img {
+    width: 80%;
+    height: auto;
+}
+.third-img img {
+    width: 80%;
+    height: auto;
+}
+.fourth-img img {
+    width: 80%;
+    height: auto;
 }
 
-.section1 p,
-.section2 p,
-.section3 p,
-.section4 p {
-    margin: 5px 0;
+h2 {
+    width: 76.5%;
+    margin-top: 0px; /* Ajusta el espacio entre la imagen y el título (ajusta según sea necesario) */
+    text-align: center; /* Centra horizontalmente el título */
 }
 
-
-
-/* // --------------------------------PRUEBAS-------------------------------------------- */
 
 footer {
-    background-color: #333; /* Color de fondo del footer */
-    color: #fff; /* Color del texto */
+    background-color: #333;
+    /* Color de fondo del footer */
+    color: #fff;
+    /* Color del texto */
     text-align: center;
-    padding: 20px 0; /* Espaciado interno */
+    padding: 20px 0;
+    /* Espaciado interno */
 }
 
-.social-media a {
-    color: #fff; /* Color de los iconos de redes sociales */
-    font-size: 24px;
-    margin: 0 10px; /* Espaciado entre los iconos */
-    text-decoration: none;
+.social-icon {
+    color:  #ff5722;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 3rem; /* Ajusta el tamaño de los íconos según tus necesidades */
 }
-
-.footer-text {
-    margin-top: 10px; /* Espacio superior para el texto del footer */
-    font-size: 14px;
-}
-

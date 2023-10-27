@@ -1,0 +1,240 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Khand', sans-serif;
+}
+body {
+    /* Evitar desplazamiento horizontal */
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(to right,#fe7b01 0,#fe282c 100%);
+    padding: 10px 0; /* Espaciado interior en la parte superior e inferior del header */
+    color: #fff; /* Color del texto en el header */
+    text-align: center; /* Centra horizontalmente el contenido */
+    position: relative;
+    height: 9.375rem /* Altura del header aumentada */
+}
+
+nav {
+    margin-top: 3rem;
+    justify-content: space-between; /* Distribuye los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+nav a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #fff; /* Color del texto de los enlaces */
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+ul {
+    list-style: none; /* Elimina los marcadores de lista */
+}
+
+li {
+    display: inline;
+    margin: 0 10px; /* Espacio entre los elementos del menú */
+}
+
+.logo-item {
+    display: inline-block; /* Para que el logotipo esté en línea con los elementos del menú */
+}
+
+.logo {
+    width: 50px; /* Ajusta el tamaño del logotipo según tus necesidades */
+    height: auto;
+}
+
+
+.container {
+    background-color: #FFE53B;
+    background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+    text-align: center; /* Centra horizontalmente el contenido */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente utilizando flexbox */
+    /*align-items: center; OJO Centra verticalmente utilizando flexbox */
+    height: 100vh;
+    width: 100%;
+}
+
+.form-container{
+    background-color: white;
+    padding: 2rem;
+}
+h1{
+    font-weight: bolder;
+    display: block;
+    font-size: 2.5em;
+    margin-block-start: 0.67em;
+    color: black;
+}
+
+
+.progress-bar {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.step {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border: 3px solid #ccc; /* Borde gris */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.step span {
+    position: relative;
+    z-index: 2;
+}
+
+.step.active {
+    background-color: transparent;
+}
+
+.step.completed {
+    background-color: red;
+}
+
+/* Línea horizontal entre los elementos */
+.progress-bar li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(0, -50%);
+    width: 91px;
+    height: 4px;
+    background-color: black;
+    z-index: 0;
+}
+/* Círculo blanco más pequeño al medio */
+.step::before {
+    content: '';
+    position: absolute;
+    width: 40%; /* Ancho del círculo rojo */
+    height: 40%; /* Altura del círculo rojo */
+    background-color: red; /* Color del círculo blanco */
+    border-radius: 50%; /* Borde redondeado para formar un círculo */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%);
+    z-index: 0; /* Detrás del contenido del círculo */
+}
+
+/* FORMULARIO */
+
+.donation-options {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 20px;
+}
+
+.bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.donation-amount {
+    background-color: transparent;
+    border: 3px solid #ccc; /* Borde gris */
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 30%;
+}
+
+
+.donation-amount.large {
+    width: 100%;
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.monthly-donation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    background: rgba(255, 87, 34, 0.33);
+    border: none; /* Asegura que no haya bordes en el elemento */
+}
+.monthly-donation:hover {
+    background-color: red; /* Color de fondo verde */
+}
+
+label {
+    margin-right: 10px;
+}
+/* Estilo para el checkbox del newsletter */
+.newsletter-checkbox {
+    margin-right: 10px; /* Espacio a la derecha del checkbox para separarlo del texto */
+}
+
+
+/* Estilos para el botón de PayPal */
+.next-button {
+    background-color: red; /* Color de fondo de PayPal */
+    color: #fff; /* Color del texto en blanco */
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bolder;
+    font-size: 1em;
+}
+
+/* Cambiar el color de fondo al pasar el cursor sobre el botón */
+.next-button:hover {
+    background-color: #00cc00; /* Color de fondo verde */
+}
+
+
+
+footer {
+    background-color: #333;
+    /* Color de fondo del footer */
+    color: #fff;
+    /* Color del texto */
+    text-align: center;
+    padding: 20px 0;
+    /* Espaciado interno */
+}
+
+.social-icon {
+    color:  #ff5722;
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 3rem; /* Ajusta el tamaño de los íconos según tus necesidades */
+}
+
