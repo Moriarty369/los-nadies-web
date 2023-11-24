@@ -7,7 +7,6 @@ body {
     /* Evitar desplazamiento horizontal */
     overflow-x: hidden;
 }
-
 header {
     background: linear-gradient(to right,#fe7b01 0,#fe282c 100%);
     padding: 10px 0; /* Espaciado interior en la parte superior e inferior del header */
@@ -16,39 +15,31 @@ header {
     position: relative;
     height: 9.375rem /* Altura del header aumentada */
 }
-
 nav {
     margin-top: 3rem;
     justify-content: space-between; /* Distribuye los elementos a los extremos */
     align-items: center; /* Centra verticalmente los elementos */
 }
-
 nav a {
     text-decoration: none; /* Elimina el subrayado de los enlaces */
     color: #fff; /* Color del texto de los enlaces */
     font-size: 2rem;
     font-weight: bolder;
 }
-
 ul {
     list-style: none; /* Elimina los marcadores de lista */
 }
-
 li {
     display: inline;
     margin: 0 10px; /* Espacio entre los elementos del menú */
 }
-
 .logo-item {
     display: inline-block; /* Para que el logotipo esté en línea con los elementos del menú */
 }
-
 .logo {
     width: 50px; /* Ajusta el tamaño del logotipo según tus necesidades */
     height: auto;
 }
-
-
 .container {
     background-color: #FFE53B;
     background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
@@ -71,8 +62,6 @@ h1{
     margin-block-start: 0.67em;
     color: black;
 }
-
-
 .progress-bar {
     list-style: none;
     display: flex;
@@ -83,7 +72,6 @@ h1{
     margin: 0 auto;
     background-color: white;
 }
-
 .step {
     position: relative;
     width: 30px;
@@ -97,20 +85,16 @@ h1{
     font-weight: bold;
     z-index: 1;
 }
-
 .step span {
     position: relative;
     z-index: 2;
 }
-
 .step.active {
     background-color: transparent;
 }
-
 .step.completed {
     background-color: red;
 }
-
 /* Línea horizontal entre los elementos */
 .progress-bar li:not(:last-child)::after {
     content: "";
@@ -141,7 +125,7 @@ h1{
 
 .donation-options {
     max-width: 400px;
-    margin: 20px auto;
+    margin: 40px auto;
     padding: 20px;
     background-color: #fff;
     border-radius: 5px;
@@ -152,7 +136,7 @@ h1{
     display: flex;
     justify-content: space-between;
     margin-top: 4rem;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .bottom-buttons {
@@ -185,7 +169,7 @@ h1{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
     border-radius: 10px;
     background: rgba(255, 87, 34, 0.33);
     border: none; /* Asegura que no haya bordes en el elemento */
@@ -195,13 +179,54 @@ h1{
 }
 
 label {
-    margin-right: 10px;
+    
+    cursor: pointer; /* Cambia el cursor al puntero al pasar sobre las etiquetas */
 }
+
+/* Estilo para los botones de donación dentro de las etiquetas label */
+label button.donation-amount {
+    background-color: transparent;
+    border: 3px solid #ccc;
+    font-weight: bolder;
+    font-size: 1.5em;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Estilo para el botón "Otra cantidad" */
+.bottom-buttons button.donation-amount.large {
+    width: 100%;
+}
+
+/* Estilo para el botón "Donar mensualmente" */
+.monthly-donation button.donation-amount.large {
+    background: rgba(255, 87, 34, 0.33);
+    border: none;
+    width: 100%;
+}
+
+.monthly-donation button.donation-amount.large:hover {
+    background-color: red; /* Color de fondo rojo al pasar el cursor */
+    
+}
+
+.monthly-donation button.donation-amount.large::before {
+    content: "\2665"; /* Código de entidad Unicode para el corazón */
+    margin-right: 5px; /* Espacio entre el corazón y el texto */
+    color:  #ff5722;; /* Color del corazón */
+}
+
 /* Estilo para el checkbox del newsletter */
+.newsletter{
+    margin-bottom: 2rem;
+}
+
 .newsletter-checkbox {
     margin-right: 10px; /* Espacio a la derecha del checkbox para separarlo del texto */
 }
-
 
 /* Estilos para el botón de PayPal */
 .next-button {
@@ -218,8 +243,6 @@ label {
 .next-button:hover {
     background-color: #00cc00; /* Color de fondo verde */
 }
-
-
 
 footer {
     background-color: #333;

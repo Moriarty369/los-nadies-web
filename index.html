@@ -3,22 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Los nadies</title>
+    <script src="https://kit.fontawesome.com/60be6c00de.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Khand" />
     <link rel="stylesheet" href="./styles.css">
+    <!-- Agrega esto en el encabezado -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <title>Los nadies</title>
 </head>
 <body>
     <header>
         <nav>
-            <ul>
+            <ul id="autoWidth" class="cs-hidden">
                 <li class="logo-item"><img src="./img/logoLosNadies.png" alt="Logo de Los Nadies" class="logo"></li>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Videos</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="./html/blog.html">Blog</a></li>
                 <li><a href="#">Acerca de</a></li>
                 <li class="donate-button"><a href="./donate.html" target="_blank">Donar</a></li>
             </ul>
+            <div class="toggle-btn" id="dark-btn">
+                <span>Modo Oscuro</span>
+                <img src="./img/moon-solid.svg" alt="Imagen de luna para modo oscuro">
+            </div>
         </nav>
         <div class="video-container">
             <video muted id="parallax-video" loop>
@@ -27,47 +35,59 @@
                 Tu navegador no admite videos HTML5.
             </video>     
         </div>
-        <!-- Agregando fuentes (khand) -->
-        <script src="https://kit.fontawesome.com/60be6c00de.js" crossorigin="anonymous"></script>
+        <div class="show">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="hidden-container">
+            <ul class="hidden-list">
+                <li><a href="#">Home</a></li>
+                <li><a href="#l">Videos</a></li>
+                <li><a href="./html/blog.html">Blog</a></li>
+                <li><a href="#">Acerca de</a></li>
+                <li><a href="./donate.html">Donar</a></li>
+                <li><a href="#">Iniciar sesión</a></li>
+                <li><a href="#">Regístrate</a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+            </ul>
+        </div>
     </header>
-    <div class="container">
-        <div class="title-container">
+    <section class="container" id="container">
+        <div class="title-container" id="dark-title">
             <h1 class="title">Percibe, comprende<br> &emsp; &emsp; &emsp;y... TRANSFORMA.</h1>
         </div>
-        <div class="side-text-container">
+        <div class="side-text-container" id="dark-text">
             <br><p>&emsp;Es crucial entender que la indiferencia y la arrogancia son los mayores obstáculos para la inclusión. Al mostrar la realidad desde la perspectiva de aquellos marginados, nuestro proyecto desmantela los estereotipos y promueve la comprensión.Lo que vemos como un pequeño gesto puede tener un impacto monumental en la vida de alguien que ha sido ignorado durante demasiado tiempo
             </p><br>
             <p>&emsp;Es crucial entender que la indiferencia y la arrogancia son los mayores obstáculos para la inclusión. Al mostrar la realidad desde la perspectiva de aquellos marginados, nuestro proyecto desmantela los estereotipos y promueve la comprensión.Lo que vemos como un pequeño gesto puede tener un impacto monumental en la vida de alguien que ha sido ignorado durante demasiado tiempo
             </p><br>
-            <p>&emsp;Es crucial entender que la indiferencia y la arrogancia son los mayores obstáculos para la inclusión. Al mostrar la realidad desde la perspectiva de aquellos marginados, nuestro proyecto desmantela los estereotipos y promueve la comprensión.Lo que vemos como un pequeño gesto puede tener un impacto monumental en la vida de alguien que ha sido ignorado durante demasiado tiempo
-            </p><br>
-            <p>&emsp;Es crucial entender que la indiferencia y la arrogancia son los mayores obstáculos para la inclusión. Al mostrar la realidad 
+            <p>&emsp;Es crucial entender que la indiferencia y la arrogancia son los mayores obstáculos para la inclusión. Al mostrar la realidad desde la perspectiva de aquellos marginados
             </p><br>
             <a class="involucrate-button" href="#">Involúcrate</a>
         </div>
-    <div class="image-container">
-        <div class="image-pair">
-            <div class="first-img">
-                <img src="./img/sonia.png" alt="Image sonia">
-                <h2 class="image-title">Sonia</h2>
+        <div class="image-container">
+            <div class="image-pair">
+                <div class="first-img">
+                    <img src="./img/sonia.png" alt="Image sonia">
+                    <h2 class="image-title">Sonia</h2>
+                </div>
+                <div class="second-img">
+                    <img src="./img/shen.png" alt="Image shen">
+                    <h2 class="image-title">Shen</h2>
+                </div>
             </div>
-            <div class="second-img">
-                <img src="./img/shen.png" alt="Image shen">
-                <h2 class="image-title">Shen</h2>
+            <div class="image-pair">
+                <div class="third-img">
+                    <img src="./img/rowena.png" alt="Image rowena">
+                    <h2 class="image-title">Rowena</h2> 
+                </div>
+                <div class="fourth-img">
+                    <img src="./img/kimoni.png" alt="Image kimoni">
+                    <h2 class="image-title">Kimoni</h2>
+                </div>
             </div>
         </div>
-        <div class="image-pair">
-            <div class="third-img">
-                <img src="./img/rowena.png" alt="Image rowena">
-                <h2 class="image-title">Rowena</h2> 
-            </div>
-            <div class="fourth-img">
-                <img src="./img/kimoni.png" alt="Image kimoni">
-                <h2 class="image-title">Kimoni</h2>
-            </div>
-        </div>
-    </div>
-    </div>  
+    </section>  
+    
     <footer>
         <div class="caution">
             <p>PRECAUCIÓN...Nuestro contenido puede resultar ofensivo,<br> esperamos que lo suficiente como para que actúes...</p>
@@ -86,6 +106,7 @@
             <p>Derechos de autor © [2024] Los Nadies. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <script src="./js/parallaxController.js"></script>
+    <script src="./scripts/parallaxController.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

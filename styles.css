@@ -1,214 +1,643 @@
-/* Estilos globales */
-* {
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Khand', sans-serif;
+/* PANTALLAS  MÍNIMO 27 PULGADAS*/
+@media (max-width: 1920px) {
+
+    /*-_- ------------------ landing page ------------------------------- */
+    * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+        font-family: 'Khand', sans-serif;
+    }
+
+    body {
+        /* Evitar desplazamiento horizontal */
+        overflow-x: hidden;
+        overscroll-behavior: none;
+    }
+
+    header {
+        color: #fff;
+        padding: 0px;
+        text-align: center;
+        /* Permite el posicionamiento absoluto en el elemento hijo */
+        position: relative;
+        /* Asegura que el encabezado esté por encima del video */
+        z-index: 1;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        height: 90vh;
+        overflow: hidden;
+    }
+
+    video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        transform-origin: center;
+        transition: transform 0.3s ease;
+        /* Agregamos una transición suave para el zoom */
+    }
+
+    nav {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    nav ul li:last-child {
+        margin-right: 0;
+        /* Elimina el margen derecho del último elemento */
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.5rem;
+    }
+
+    .logo-item img {
+        width: 80px;
+        /* Ajustar el tamaño del logotipo */
+    }
+
+    .donate-button a {
+        padding: 10px 20px;
+        background-color: #ff5722;
+        /* Color de fondo del botón */
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+
+    .show {
+        display: none;
+    }
+
+    .container {
+        background-color: #FFF7E9;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 320vh;
+    }
+
+    .title-container {
+        padding-left: 4.8rem;
+        width: 30%;
+        background: white;
+        margin-left: 8rem;
+        margin-top: -5.5rem;
+        margin-bottom: 0rem;
+        position: relative;
+        z-index: 1;
+    }
+
+    .title {
+        font-weight: bolder;
+        display: block;
+        font-size: 2.5em;
+        margin-block-start: 0.67em;
+        color: black;
+    }
+
+    .side-text-container {
+        width: 35%;
+        background: white;
+        float: left;
+        margin-left: 8rem;
+        margin-top: 0px;
+        padding-bottom: 2rem;
+        font-size: 1.5rem;
+        text-align: center;
+        max-height: 80%;
+        overflow: hidden;
+    }
+
+    .side-text-container p {
+        text-align: left;
+    }
+
+    .involucrate-button {
+        background: linear-gradient(to right, #fe7b01 0, #fd3333 100%);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        padding: .7rem 1rem;
+        display: block;
+        /* Cambia a un bloque para que ocupe toda la anchura */
+        margin: 0 auto;
+        /* Centra horizontalmente el botón dentro del contenedor */
+        width: 50%;
+        /* Puedes ajustar el ancho del botón según tus necesidades */
+        border-radius: 1rem;
+    }
+
+    .image-title {
+        font-family: 'Tu-Fuente-Moderna', sans-serif;
+        background-color: #FF731D;
+        padding-left: 1rem;
+        /* Reemplaza 'Tu-Fuente-Moderna' con la fuente que desees */
+        color: #FFF7E9;
+        /* Cambia el color del texto a tu preferencia */
+        font-size: 50px;
+        /* Cambia el tamaño de la fuente a tu preferencia */
+        margin: 0;
+        /* Elimina los márgenes predeterminados del h1 */
+    }
+
+    .image-container {
+        float: right;
+        width: 50%;
+        display: flex;
+        max-height: 80%;
+    }
+
+    .image-container img {
+        width: 90%;
+    }
+
+    .first-img,
+    .second-img,
+    .third-img,
+    .fourth-img {
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .second-img,
+    .fourth-img {
+        margin-top: 4.5rem;
+    }
+
+    .first-img img {
+        width: 80%;
+        height: auto;
+    }
+
+    .second-img img {
+        width: 80%;
+        height: auto;
+    }
+
+    .third-img img {
+        width: 80%;
+        height: auto;
+    }
+
+    .fourth-img img {
+        width: 80%;
+        height: auto;
+    }
+
+    h2 {
+        width: 76.5%;
+        margin-top: 0px;
+        text-align: center;
+    }
+
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .social-icon {
+        color: #ff5722;
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 3rem;
+    }
+
+    /* -_- ------------------ BLOG PAGE ----------------------------- -_- */
+    .blog-body {
+        font-family: 'Robboto', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+        background-position: center center;
+        background-size: cover;
+        transition: 0.4s;
+    }
+
+    .blog-header {
+        color: #fff;
+        padding: 0px;
+        text-align: center;
+        /* Permite el posicionamiento absoluto en el elemento hijo */
+        position: relative;
+        /* Asegura que el encabezado esté por encima del video */
+        z-index: 100;
+    }
+
+    .blog-body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+
+    .slider-container {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        height: 70vh;
+        width: 70vw;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide {
+        opacity: 0;
+        height: 100vh;
+        width: 100vw;
+        /* background-image: url(./img/blog/1.png); */
+        background-position: center center;
+        background-size: cover;
+        position: absolute;
+        top: -15vh;
+        left: -15vw;
+        transition: 0.4s ease;
+        z-index: 1;
+    }
+
+    .slide.active {
+        opacity: 1;
+    }
+
+    .arrow {
+        position: fixed;
+        background-color: transparent;
+        color: #fff;
+        padding: 20px;
+        font-size: 30px;
+        border: 2px solid orange;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+    }
+
+    .arrow:focus {
+        outline: 0;
+    }
+
+    .left-arrow {
+        left: calc(15vw - 65px);
+    }
+
+    .right-arrow {
+        right: calc(15vw - 65px);
+    }
+
+    /* ----------------- ESTILOS MENU HAMBURGUESA ----------------- */
+    .hidden-container {
+        position: relative;
+    }
+
+    .hidden-list {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(128, 128, 128, 0.9));
+        /* Fondo semi-transparente */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        z-index: 999;
+        /* Ajusta el índice z para asegurarte de que esté por encima de otros elementos */
+    }
+
+    .hidden-list li {
+        padding: 20px;
+        text-align: center;
+        font-size: 1.5em;
+        /* Aumenta el tamaño de la fuente en un 50% */
+        font-weight: bold;
+        /* Aumenta el grosor de la fuente */
+        position: relative;
+        color: #fff;
+        /* Color del texto */
+    }
+
+    .hidden-list li:hover {
+        background: linear-gradient(to bottom, rgba(254, 123, 1, 0.9), rgba(253, 51, 51, 0.6));
+    }
+
+    .hidden-list li::before,
+    .hidden-list li::after {
+        content: "";
+        position: absolute;
+        height: 5px;
+        /* Grosor de las líneas de sombra */
+        background-color: rgba(226, 149, 120, 0.5);
+        /* Color semi-transparente basado en #e29578 para las sombras chulas */
+        width: calc(100% + 40px);
+        /* Ancho ajustado para extenderse más allá del contenido del li */
+        left: -20px;
+        /* Desplaza a la izquierda la mitad del ancho adicional */
+    }
+
+    .hidden-list li::before {
+        top: 0;
+    }
+
+    .hidden-list li::after {
+        bottom: 0;
+    }
+
+    .show:hover {
+        cursor: pointer;
+        background-color: #FF731D;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    /* ----------------- FINAL ESTILOS MENU HAMBURGUESA ----------------- */
+
+    /* ----------------- DARK BUTTON ----------------- */
+    .toggle-btn {
+        background: red;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 4.2em;
+        right: 4em;
+        width: 150px;
+        height: 40px;
+        border-radius: 20px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .toggle-btn img {
+        width: 25px;
+        margin-left: 10px;
+    }
+
+    .toggle-btn i:first-child {
+        position: absolute;
+        left: 5px;
+    }
+
+    .toggle-btn i:last-child {
+        position: absolute;
+        right: 5px;
+    }
+
+    .dark-theme {
+        background-color: black;
+    }
+
+    .dark-title {
+        background: black;
+        color: white;
+        border: 5px solid #ff5722;
+        animation: animatedBorder 4s infinite;
+
+    }
+
+    .dark-text {
+        background: black;
+        color: white;
+        border: 5px solid #ff5722;
+        animation: animatedBorder 4s infinite;
+    }
+
+    @keyframes animatedBorder {
+        0% {
+            border-color: #ff5722;
+        }
+
+        25% {
+            border-color: #ffcc80;
+        }
+
+        50% {
+            border-color: #ff5722;
+        }
+
+        75% {
+            border-color: #ffcc80;
+        }
+
+        100% {
+            border-color: #ff5722;
+        }
+    }
 }
 
-body {
-    /* Evitar desplazamiento horizontal */
-    overflow-x: hidden;
-}
-
-header {
+/* ----------------- FINAL ESTILOS DARK BUTTON ----------------- */
+/* ----------------- FORMULARIO  ----------------- */
+.form-header {
+    background: linear-gradient(to right, #fe7b01 0, #fe282c 100%);
+    padding: 10px 0;
     color: #fff;
-    padding: 0px;
     text-align: center;
-    /* Permite el posicionamiento absoluto en el elemento hijo */
+    /* Centra horizontalmente el contenido */
     position: relative;
-    /* Asegura que el encabezado esté por encima del video */
-    z-index: 1;
+    height: 15rem
 }
 
-.video-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
+.form-nav {
+    justify-content: space-between;
+    /* Distribuye los elementos a los extremos */
+    align-items: center;
+    /* Centra verticalmente los elementos */
 }
 
-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: auto;
-    transform-origin: center;
-    transition: transform 0.3s ease;
-    /* Agregamos una transición suave para el zoom */
-}
-
-nav {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    right: 0;
-    z-index: 2;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li:last-child {
-    margin-right: 0; /* Elimina el margen derecho del último elemento */
-}
-
-nav a {
+.form-nav a {
     text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
     color: #fff;
-    font-size: 1.5rem;
-}
-
-.logo-item img {
-    width: 80px; /* Ajustar el tamaño del logotipo */
-}
-
-.donate-button a {
-    padding: 10px 20px;
-    background-color: #ff5722;
-    /* Color de fondo del botón */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.container {
-    background-color: #FFF7E9;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 120vh;
-    /* Asegura que el contenedor tenga al menos el 100% de la altura de la ventana */
-}
-
-.title-container {
-    padding-left: 5rem;
-    width: 30%;
-    background: white;
-    margin-left: 8rem;
-    margin-top: -5.5rem;
-    margin-bottom: 0rem;
-    position: relative;
-    z-index: 1;
-    
-}
-
-.title {
+    /* Color del texto de los enlaces */
+    font-size: 2rem;
     font-weight: bolder;
-    display: block;
-    font-size: 2.5em;
-    margin-block-start: 0.67em;
-    color: black;
 }
 
-.side-text-container {
-    width: 34.1%;
-    background:white;
-    float:left;
-    margin-left: 8rem;
-    margin-top: 0px;
-    padding-bottom: 2rem;
-    font-size: 1.5rem;
-    text-align: center; /* Centra horizontalmente el contenido */
+.form-ul {
+    list-style: none;
+    /* Elimina los marcadores de lista */
 }
 
-.side-text-container p {
-    text-align: left; /* Alinea el texto de los elementos <p> a la izquierda */
+.form-li {
+    display: inline;
+    margin: 0 10px;
+    /* Espacio entre los elementos del menú */
 }
 
-.involucrate-button {
-    background: linear-gradient(to right,#fe7b01 0,#fd3333 100%);
-    color: #fff;
-    font-weight: 700;
-    text-decoration: none;
-    padding: .7rem 1rem;
-    display: block; /* Cambia a un bloque para que ocupe toda la anchura */
-    margin: 0 auto; /* Centra horizontalmente el botón dentro del contenedor */
-    width: 50%; /* Puedes ajustar el ancho del botón según tus necesidades */
-    border-radius: 1rem;
+.logo-item {
+    display: inline-block;
+    /* Para que el logotipo esté en línea con los elementos del menú */
 }
 
-.image-title {
-    font-family: 'Tu-Fuente-Moderna', sans-serif;
-    background-color: #FF731D;
-    padding-left: 1rem;
-    /* Reemplaza 'Tu-Fuente-Moderna' con la fuente que desees */
-    color: #FFF7E9;
-    /* Cambia el color del texto a tu preferencia */
-    font-size: 50px;
-    /* Cambia el tamaño de la fuente a tu preferencia */
-    margin: 0;
-    /* Elimina los márgenes predeterminados del h1 */
+.logo {
+    width: 50px;
+    /* Ajusta el tamaño del logotipo según tus necesidades */
+    height: auto;
 }
 
-.image-container {
-    float:right;
-    width: 50%;
+.form-container {
+    width: 100%;
+    height: 70vh;
     display: flex;
+    align-items: center;
+    align-content: center;
+    background-image: url(./img/background-form.jpeg);
+    background-size: cover;
+    /* Ajusta el tamaño de la imagen para cubrir completamente el fondo */
+    background-position: center;
 }
 
-.image-container img {
-    width: 90%;
+
+.form-section {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.first-img, .second-img, .third-img, .fourth-img {
-    height: 50%;
+form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
 }
 
-.second-img, .fourth-img {
-    margin-top: 4.5rem;
+label {
+    margin-bottom: 8px;
+    font-weight: bold;
 }
 
-.first-img img {
-    width: 80%;
-    height: auto;
+textarea {
+    height: 100px;
+    resize: none;
+    margin-bottom: 16px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.second-img img {
-    width: 80%;
-    height: auto;
-}
-.third-img img {
-    width: 80%;
-    height: auto;
-}
-.fourth-img img {
-    width: 80%;
-    height: auto;
-}
-
-h2 {
-    width: 76.5%;
-    margin-top: 0px; /* Ajusta el espacio entre la imagen y el título (ajusta según sea necesario) */
-    text-align: center; /* Centra horizontalmente el título */
-}
-
-
-footer {
-    background-color: #333;
-    /* Color de fondo del footer */
+.like-button {
+    background-color: #4CAF50;
     color: #fff;
-    /* Color del texto */
-    text-align: center;
-    padding: 20px 0;
-    /* Espaciado interno */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-bottom: 16px;
 }
 
-.social-icon {
-    color:  #ff5722;
-    display: inline-block;
-    margin: 0 10px;
-    font-size: 3rem; /* Ajusta el tamaño de los íconos según tus necesidades */
+.like-button:hover {
+    background-color: #45a049;
 }
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+
+
+
+/* ----------------- FINAL ESTILOS FORMULARIO  ----------------- */
+
+
+
+
+
+
+/* monitores de 24 pulgadas o menos */
+@media (max-width:1440px) {
+    .container {
+        height: 200vh;
+    }
+
+    .title {
+        font-size: 2.3em;
+    }
+
+    .side-text-container {
+        width: 36.6%;
+        font-size: 1.2rem;
+    }
+
+    .involucrate-button {
+        background: linear-gradient(to right, #fe7b01 0, #fd3333 100%);
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        padding: .7rem 1rem;
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        border-radius: 1rem;
+    }
+
+    .show {
+        display: block !important;
+        font-size: 50px;
+        position: absolute;
+        top: 2em;
+        left: 4em;
+        z-index: 999;
+    }
+
+    .icons-container {
+        display: none;
+    }
+
+    ul {
+        display: none;
+    }
+}
+
+/*  monitores de 22 pulgadas o menos */
+@media (max-width: 1280px) {}
+
+
+/*  tablets */
+@media (min-width: 769px) and (max-width: 1024px) {}
+
+/*  móviles*/
+@media (max-width: 768px) {}
