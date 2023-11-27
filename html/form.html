@@ -21,22 +21,15 @@
             </ul>
         </nav>
     </header>
-    <div class="form-container">
-        <section class="form-section">
-            <h2>Formulario de Ayúdanos a Mejorar</h2>
-                <form>
-                    <label for="feedback">Cuéntanos cómo podemos mejorar:</label>
-                    <textarea id="feedback" name="feedback" required></textarea>
-        
-                    <label>¿Te gusta nuestro trabajo?</label>
-                    <button type="button" class="like-button" onclick="toggleLike()">¡Me gusta!</button>
-        
-                    <button type="submit">Enviar Feedback</button>
-                </form>
-        </section>
-    </div>
-
-    </div>
+    <form id="collaboration-form">
+        <div class="personal-info">
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+        </div>
+    </form>
     <footer>
         <div class="caution">
             <p>PRECAUCIÓN...Nuestro contenido puede resultar ofensivo,<br> esperamos que lo suficiente como para que actúes...</p>

@@ -88,8 +88,6 @@
             </div>
         </form>
     </div>
-
-    </div>
     <footer>
         <div class="caution">
             <p>PRECAUCIÓN...Nuestro contenido puede resultar ofensivo,<br> esperamos que lo suficiente como para que actúes...</p>
@@ -108,7 +106,59 @@
             <p>Derechos de autor © [2024] Los Nadies. Todos los derechos reservados.</p>
         </div>
     </footer>
-    <!-- Agregando fuentes (khand) -->
+     <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                // Obtén referencias a los elementos del formulario
+                const form = document.querySelector('.form-container');
+                const amountButtons = document.querySelectorAll('.donation-amount');
+                const otherAmountButton = document.querySelector('.donation-amount.large');
+                const monthlyDonationButton = document.querySelector('.monthly-donation button');
+                const newsletterCheckbox = document.getElementById('newsletter');
+                const nextButton = document.querySelector('.next-button');
+        
+                // Agrega un event listener al formulario para la validación
+                form.addEventListener('submit', function (event) {
+                    // Verifica si se ha seleccionado alguna cantidad de donación
+                    const selectedAmount = document.querySelector('input[name="donation-amount"]:checked');
+                    if (!selectedAmount && !otherAmountButton.classList.contains('active')) {
+                        alert('Por favor, selecciona una cantidad de donación.');
+                        event.preventDefault(); // Evita que el formulario se envíe
+                        return;
+                    }
+        
+                    // Otras verificaciones pueden agregarse según sea necesario
+        
+                    // Si todas las verificaciones son exitosas, el formulario se enviará normalmente
+                });
+        
+                // Agrega event listeners a los botones de cantidad de donación
+                amountButtons.forEach(function (button) {
+                    button.addEventListener('click', function () {
+                        otherAmountButton.classList.remove('active');
+                    });
+                });
+        
+                // Agrega un event listener al botón de "Otra cantidad"
+                otherAmountButton.addEventListener('click', function () {
+                    amountButtons.forEach(function (button) {
+                        button.checked = false;
+                    });
+                    otherAmountButton.classList.add('active');
+                });
+        
+                // Agrega un event listener al botón de "Donar mensualmente"
+                monthlyDonationButton.addEventListener('click', function () {
+                    alert('¡Gracias por considerar una donación mensual!');
+                });
+        
+                // Puedes agregar más validaciones según sea necesario
+        
+                // Agrega un event listener al botón "Siguiente"
+                nextButton.addEventListener('click', function () {
+                    alert('¡Siguiente paso!');
+                });
+            });
+        </script><!-- Agregando fuentes (khand) -->
     <script src="https://kit.fontawesome.com/60be6c00de.js" crossorigin="anonymous"></script>
 </body>
 </html>
